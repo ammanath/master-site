@@ -1,4 +1,4 @@
-# ammanath.com home site
+# Home site
 
 ## Steps to deploy to netlify
 -- Check into github
