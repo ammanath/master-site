@@ -1,5 +1,8 @@
 # Home site
 
+## PS Course
+Front-End Web Development Quick Start With HTML5, CSS, and JavaScript by Shawn Wildermuth
+
 ## Steps to deploy to netlify
 -- Check into github, Auto Publish set up
 

@@ -1,9 +1,7 @@
 /* site.css */
 
-header, footer {
+footer {
   background-color: lightgray;
-  border: solid 1px black;
-  /*font-family: 'Times New Roman', serif;*/
 }
 
 footer {
@@ -30,6 +28,7 @@ header nav li {
 .bordered-image {
   width: 200px;
   height: 60px;
+  border-radius: 5px;
 }
 
 #main {
@@ -39,6 +38,13 @@ header nav li {
   margin: 20px 0;
   padding: 5px;
   height: 800px;
+}
+
+.container {
+  width: 989px;
+  margin: 0 auto;
+  background-color:ghostwhite;
+  padding: 5px;
 }
 
 #results {
@@ -74,21 +80,16 @@ header nav li {
   margin-top: 5px;
 }
 
-.container {
-  width: 989px;
-  margin: 0 auto;
-  background-color:ghostwhite;
-  padding: 5px;
+
+
+
+
+
+/* required */
+.center {
+ text-align: center;
+  
 }
-
-.headerimage {
-  float: left;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-
-
 
 
 
