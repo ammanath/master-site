@@ -1,7 +1,7 @@
 # Home site
 
 ## Steps to deploy to netlify
--- Check into github
+-- Check into github, Auto Publish set up
 
 
 ##Commands
