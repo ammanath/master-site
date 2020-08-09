@@ -40,6 +40,10 @@ header nav li {
   height: 800px;
 }
 
+#formSection{
+  visibility: hidden;
+}
+
 .container {
   width: 989px;
   margin: 0 auto;
