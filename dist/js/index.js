@@ -49,43 +49,6 @@ for(var i=0; i<results.length; i++){
     console.log(result.name);
 }
 
-// console.log("msg is " + typeof(msg));
-// console.log("resultsDiv is " + typeof(resultsDiv));
 
-// var none;
-// console.log("none is " + typeof(none));
-
-// var aNumber = 0;
-// var aDouble = 1.2;
-// var trueFalse = true;
-
-// none = 0;
-
-// console.log("aNumber is " + typeof(aNumber));
-// console.log("aDouble is " + typeof(aDouble));
-// console.log("trueFalse is " + typeof(trueFalse));
-// console.log("none is " + typeof(none));
-
-// none = "text";
-// console.log("none is " + typeof(none));
-
-// function showMsg(msg){
-//     console.log("Show msg : " + msg);
-// }
-
-// showMsg("Woohoooo!!!!");
-
-// var showIt = function(msg){
-//     console.log("ShowIt " + msg);
-// }
-
-// function showItThen(msg, callback){
-//     showIt(msg);
-//     callback();
-// }
-
-// showItThen("From showItThen called", function(){
-//     console.log("callback called");
-// });
 
 

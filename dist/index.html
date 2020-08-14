@@ -1,82 +1,106 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <title>Ammanath @ Home</title>
-  <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>      
+<html lang="en" xmln="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Ammanath @ Home</title>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
 
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+        <div>
+          <img src="img/linkedin_banner_image_1.png" class="bordered-image" />
+        </div>
+      </header>
 
-<body>
-  <div class="container">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Home</a>
-          </li>
-          <li><a href="/contact.html">Contact</a>
-          </li>
-          <li><a href="/about.html">About</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <img src="img/linkedin_banner_image_1.png" class="bordered-image" />
-      </div>
-      
-    </header>
-    
-    <section id="main">
-      <p>
-        Very little is needed to make a  
-        <em>happy life</em>; it is all within yourself, in 
-        <span>your way  </span>of
-        <strong>thinking</strong> - <a href="https://www.brainyquote.com/quotes/marcus_aurelius_386395#:~:text=Marcus%20Aurelius%20Quotes&text=Very%20little%20is%20needed%20to%20make%20a%20happy%20life%3B%20it,in%20your%20way%20of%20thinking.">
-          Marcus Aurelius</a>
-            <br/><br/>
-            Nothing, to my way of thinking, is a better proof of a  
-        <em>well ordered mind</em> than a man’s ability to stop just where he is and pass some time 
-        <strong>in his own company</strong> - <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger">
-          Seneca</a>
-        
-        
-        </p><br/><br/>
+      <section id="main">
+        <p>
+          Very little is needed to make a
+          <em>happy life</em>; it is all within yourself, in
+          <span>your way </span>of <strong>thinking</strong> -
+          <a
+            href="https://www.brainyquote.com/quotes/marcus_aurelius_386395#:~:text=Marcus%20Aurelius%20Quotes&text=Very%20little%20is%20needed%20to%20make%20a%20happy%20life%3B%20it,in%20your%20way%20of%20thinking."
+          >
+            Marcus Aurelius</a
+          >
+          <br /><br />
+          Nothing, to my way of thinking, is a better proof of a
+          <em>well ordered mind</em> than a man’s ability to stop just where he
+          is and pass some time <strong>in his own company</strong> -
+          <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger"> Seneca</a>
+        </p>
+        <br /><br />
+        <section id="myCanvasSection">
+          <canvas
+            id="myCanvas"
+            style="border: 0px solid black;"
+            width="400"
+            height="500"
+          >
+
+          </canvas>
+          <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+
+            context.fillStyle = "Yellow";
+            context.beginPath();
+            context.arc(100, 100, 50,0, Math.PI*2/4, false);
+            context.stroke();
+            
+          </script>
+        </section>
+
         <section id="formSection">
-      <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
-        <label for="fbPhrase">Feedback:</label>
-        <input type="text" name="fbPhrase" id="fbPhrase" />
-        <br/>
-        <input type="checkbox" name="useStars" id="useStars" checked="true" />
-        <label for="useStars">Use Stars?</label>
-        <br/>
-        <label for="langChoice">Language:</label>
-        <select name="langChoice" id="langChoice">
-          <option>Any</option>
-          <option>Hindi</option>
-          <option selected>English</option>
-          <option>Marathi</option>
-          <option>Malayalam</option>
-        </select>
-        <br/>
-        <input type="submit" value="search" />
-      </form>
-      <div id="results" class="bordered-image">
-        This is where emus will live...eventually.
-      </div>
-    </section>
-    </section>
-    <footer>
-      <div class="center">Most problems arise when you take yourself too <em>seriously</em>...</div>
-    </footer>
-  </div>
+          <form
+            action="http://wilder.azurewebsites.net/echo"
+            method="POST"
+            class="bordered-image simple-form"
+          >
+            <label for="fbPhrase">Feedback:</label>
+            <input type="text" name="fbPhrase" id="fbPhrase" />
+            <br />
+            <input
+              type="checkbox"
+              name="useStars"
+              id="useStars"
+              checked="true"
+            />
+            <label for="useStars">Use Stars?</label>
+            <br />
+            <label for="langChoice">Language:</label>
+            <select name="langChoice" id="langChoice">
+              <option>Any</option>
+              <option>Hindi</option>
+              <option selected>English</option>
+              <option>Marathi</option>
+              <option>Malayalam</option>
+            </select>
+            <br />
+            <input type="submit" value="search" />
+          </form>
+          <div id="results" class="bordered-image">
+            This is where emus will live...eventually.
+          </div>
+        </section>
+      </section>
+      <footer>
+        <div class="center">
+          Most problems arise when you take yourself too <em>seriously</em>...
+        </div>
+      </footer>
+    </div>
 
-  <script type="text/javascript" src = "js/index.js">
-
-  </script>
-
-</body>
-
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
