@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmln="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Ammanath @ Canvas</title>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/site.css" />
+
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d'); //pen or brush
+            ctx.fillStyle = 'navy';
+            ctx.strokeStyle = 'red';
+            //(x, y, width, height)
+            ctx.rect(10,50,100,200);
+            ctx.stroke();
+            ctx.fill();
+
+            ctx.fillStyle = 'Navy';
+            //ctx.lineWidth = 2;
+            // //(x, y, radius, endAngle,antiClockwise)
+            ctx.arc(300,300,50,60,2*Math.PI, false);
+            ctx.stroke();
+
+            // ctx.clearRect(350, 250, 10,10);
+
+        }
+    </script>
+
+  </head>
+
+  <body>
+    <canvas id="myCanvas" width="600" height="400" style="background-color: lightgray;">
+        Canvas not supported!
+    </canvas>
+
+
+  </body>
+</html>
