@@ -11,20 +11,18 @@
         window.onload = function(){
             var canvas = document.getElementById('myCanvas');
             var ctx = canvas.getContext('2d'); //pen or brush
-            ctx.fillStyle = 'navy';
-            ctx.strokeStyle = 'red';
-            //(x, y, width, height)
-            ctx.rect(10,50,100,200);
-            ctx.stroke();
-            ctx.fill();
+           
+            var prices = [1.4,1.5, 1.7,2, 2.75];
+            var width = 50;
+            var curX=50;
+            var base = 200;
 
-            ctx.fillStyle = 'Navy';
-            //ctx.lineWidth = 2;
-            // //(x, y, radius, endAngle,antiClockwise)
-            ctx.arc(300,300,50,60,2*Math.PI, false);
-            ctx.stroke();
-
-            // ctx.clearRect(350, 250, 10,10);
+            ctx.fillStyle = 'green';
+            for(var i=0; i<prices.length;i++){
+              var h = prices[i]*100;
+              ctx.fillRect(curX,canvas.height- h,width,h);
+              curX+= width+10;
+            }
 
         }
     </script>
@@ -32,7 +30,7 @@
   </head>
 
   <body>
-    <canvas id="myCanvas" width="600" height="400" style="background-color: lightgray;">
+    <canvas id="myCanvas" width="600" height="800" style="background-color: lightgray;">
         Canvas not supported!
     </canvas>
 
