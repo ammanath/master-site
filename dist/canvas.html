@@ -15,14 +15,33 @@
             var prices = [1.4,1.5, 1.7,2, 2.75];
             var width = 50;
             var curX=50;
-            var base = 200;
+ 
+            // ctx.translate(400, 300);
+            // ctx.rotate(1*Math.PI);
 
-            ctx.fillStyle = 'green';
+            
             for(var i=0; i<prices.length;i++){
               var h = prices[i]*100;
-              ctx.fillRect(curX,canvas.height- h,width,h);
+              var y= canvas.height - h -50 ;
+              ctx.fillStyle = 'green';
+              ctx.fillRect(curX,y,width,h);
+              
+
+              ctx.fillStyle = 'navy';
+              ctx.beginPath();
+              ctx.arc(curX + width/2,y,15,0,2*Math.PI, true);
+              ctx.fill();
+              
+              ctx.strokeStyle = 'white';
+              ctx.lineWidth =2;
+              ctx.stroke();
+              
               curX+= width+10;
+
             }
+
+            
+
 
         }
     </script>
@@ -30,7 +49,7 @@
   </head>
 
   <body>
-    <canvas id="myCanvas" width="600" height="800" style="background-color: lightgray;">
+    <canvas id="myCanvas" width="600" height="400" style="background-color: lightgray;">
         Canvas not supported!
     </canvas>
 
