@@ -12,30 +12,50 @@
             var canvas = document.getElementById('myCanvas');
             var ctx = canvas.getContext('2d'); //pen or brush
            
-            var prices = [1.4,1.5, 1.7,2, 2.75];
+            var prices = [140,150, 170,200, 275];
             var width = 50;
             var curX=50;
- 
+            var startX = 0;
+            var startY =0;
+            
             // ctx.translate(400, 300);
             // ctx.rotate(1*Math.PI);
 
             
             for(var i=0; i<prices.length;i++){
-              var h = prices[i]*100;
-              var y= canvas.height - h -50 ;
-              ctx.fillStyle = 'green';
-              ctx.fillRect(curX,y,width,h);
+              var x = curX;
+              var y = canvas.height - prices[i];
+              var h = prices[i];
+              
+              //move to point
+              if (startX==0) startX=x;
+              if (startY==0) startY=y;
+
+              ctx.beginPath();
+              ctx.strokeStyle ='red'
+              ctx.lineWidth =3;
+              ctx.moveTo(startX,startY);
+              ctx.lineTo(x,y);
+              ctx.stroke();
+              ctx.closePath();
+
+              startX = curX +10;
+              startY =y;
+
+              // ctx.fillStyle = 'green';
+              // ctx.fillRect(curX,y,width,h);
               
 
               ctx.fillStyle = 'navy';
               ctx.beginPath();
-              ctx.arc(curX + width/2,y,15,0,2*Math.PI, true);
+              ctx.arc(x,y,10,0,2*Math.PI, false);
               ctx.fill();
               
               ctx.strokeStyle = 'white';
               ctx.lineWidth =2;
               ctx.stroke();
-              
+              ctx.closePath();
+
               curX+= width+10;
 
             }
@@ -67,6 +87,32 @@
             ctx.closePath();
 
             ctx.stroke();
+
+
+            //bezierCurve
+            ctx.beginPath();
+            ctx.moveTo(280,50);
+            ctx.bezierCurveTo(50,400,400,400,400,50);
+            ctx.lineTo(280,50);
+            ctx.fill();
+            ctx.stroke();
+
+            //quadratic
+            ctx.strokeStyle = 'lime';
+            ctx.lineWidth =2;
+            ctx.beginPath();
+            ctx.moveTo(300,300);
+            ctx.quadraticCurveTo(100,500, 800,50);
+            ctx.stroke();
+
+            //text
+            ctx.strokeStyle = 'navy';
+            ctx.fillStyle = 'yellow';
+            var text = 'Hello World';
+            ctx.font = '40pt Arial';
+            ctx.fillText(text, 50,350);
+            ctx.strokeText(text, 50,350);
+            
 
 
         }
