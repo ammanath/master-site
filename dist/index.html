@@ -40,49 +40,7 @@
           <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger"> Seneca</a>
         </p>
         <br /><br />
-        <section id="myCanvasSection">
-          <canvas
-            id="myCanvas"
-            style="border: 0px dotted black;"
-            width="500"
-            height="400"
-          >
-          <canvas
-            id="myCanvas1"
-            style="border: 1px dotted red;"
-            width="1000"
-            height="1000"
-          >
-          </canvas>
-          <script>
-            var canvas = document.getElementById("myCanvas");
-            var context = canvas.getContext("2d");
-
-            context.fillStyle = "Yellow";
-            context.beginPath();
-            context.arc(100, 100, 50, 0, (Math.PI * 2) / 4, false);
-            context.stroke();
-            context.fillRect(50, 25, 150, 100);
-
-
-            context.fillStyle = "Lime";
-            context.fillRect(150, 125, 250, 200);
-
-            for (var x = 0.5; x < 500; x += 10) {
-              context.moveTo(x, 0);
-              context.lineTo(x, 400);
-            }
-
-            for (var y = 0.5; y < 400; y += 10) {
-  context.moveTo(0, y);
-  context.lineTo(500, y);
-}
-            context.strokeStyle = "#eee";
-            context.stroke();
-
-            
-          </script>
-        </section>
+      
 
         <section id="formSection">
           <form

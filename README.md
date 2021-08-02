@@ -16,3 +16,8 @@ netlify login
 netlify --version
 netlify status
 netlify deploy  / ntl deploy
+
+
+## Deploy
+
+https://app.netlify.com/start/deploy?repository=https://github.com/ammanath/master-site
